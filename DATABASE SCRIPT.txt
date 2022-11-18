@@ -1,0 +1,17 @@
+CREATE TABLE public.customers (
+    id character(36) NOT NULL,
+    username text NOT NULL,
+    fullname text NOT NULL,
+    email text NOT NULL,
+    dateofbirth text NOT NULL
+);
+
+CREATE TABLE public.users (
+    id character varying(36) NOT NULL,
+    username text NOT NULL,
+    passwordhash text NOT NULL,
+    emailaddress text NOT NULL,
+    emailaddressconfirmed boolean DEFAULT false NOT NULL,
+    createdat date DEFAULT now() NOT NULL,
+    updatedat date DEFAULT now() NOT NULL
+);
